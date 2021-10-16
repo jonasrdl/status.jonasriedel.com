@@ -36,6 +36,8 @@ class Website extends React.Component {
     if (this.state.onlineData === 200) {
       websiteOnlineStatus = 'Website is online!'
       
+      console.log(this.state.onlineData)
+
       return (
         <div>
           <p className="website">Website <i class="fas fa-globe"></i></p>
