@@ -1,3 +1,4 @@
+import axios from "axios"
 import React from "react"
 
 class JonasDiscordBot extends React.Component {
@@ -11,13 +12,12 @@ class JonasDiscordBot extends React.Component {
   }
 
   componentDidMount() {
-    fetch('https://status.jonasriedel.com/api/jonasdiscordbot')
-      .then((res) => res.json())
-      .then((json) => {
-        console.log(JSON.stringify(json))
+    axios.get('https://status.jonasriedel.com/api/jonasdiscordbot')
+      .then((result) => {
+        console.log(result.data)
 
         this.setState({
-          onlineData: JSON.stringify(json),
+          onlineData: JSON.stringify(result.data),
           DataisLoaded: true
         })
       })
