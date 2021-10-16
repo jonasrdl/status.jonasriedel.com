@@ -14,10 +14,10 @@ class JonasDiscordBot extends React.Component {
     fetch('https://status.jonasriedel.com/api/jonasdiscordbot')
       .then((res) => res.json())
       .then((json) => {
-        console.log(json)
+        console.log(JSON.stringify(json))
 
         this.setState({
-          onlineData: json,
+          onlineData: JSON.stringify(json),
           DataisLoaded: true
         })
       })
