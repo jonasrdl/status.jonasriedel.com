@@ -15,7 +15,7 @@ class JonasDiscordBot extends React.Component {
     axios.get('https://status.jonasriedel.com/api/jonasdiscordbot')
       .then((result) => {
         this.setState({
-          onlineData: JSON.stringify(result.data),
+          onlineData: result.data,
           DataisLoaded: true
         })
       })
@@ -41,36 +41,3 @@ class JonasDiscordBot extends React.Component {
 }
 
 export default JonasDiscordBot 
-
-
-
-
-
-
-/* const API = `http://status.jonasriedel.com/api`
-const axios = require('axios')
-
-const isOnline = (callback) => {
-  axios.default.get(`${API}/jonasdiscordbot`).then((result) => {
-    let websiteOnline = result.data
-
-    callback(websiteOnline)
-  })
-}
-
-const JonasDiscordBot = (props) => {
-  return (
-    <>
-      <p>JonasDiscordBot</p>
-
-      <p>
-      { isOnline((websiteOnline) => {
-        websiteOnline
-      }) }
-      </p>
-
-      <p>{props.content}</p>
-    </>
-  )
-}
-*/
