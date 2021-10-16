@@ -38,8 +38,8 @@ class JonasDiscordBot extends React.Component {
       
       return (
         <div>
-          <p>Discord Bot:</p>
-          <p style={{ color: 'green' }}>{botOnlineStatus}</p>
+          <p className="discord">Discord Bot <i class="fab fa-discord"></i></p>
+          <p className="onlineStatus" style={{ color: 'green' }}>{botOnlineStatus} <i class="fas fa-check"></i></p>
         </div>
       )
     } else {
@@ -47,8 +47,8 @@ class JonasDiscordBot extends React.Component {
 
       return (
         <div>
-          <p>Discord Bot:</p>
-          <p style={{ color: 'red' }}>{botOnlineStatus}</p>
+          <p className="discord">Discord Bot <i class="fab fa-discord"></i></p>
+          <p className="onlineStatus" style={{ color: 'red' }}>{botOnlineStatus} <i class="fas fa-times"></i></p>
         </div>
       )  
     }

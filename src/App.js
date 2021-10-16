@@ -1,9 +1,14 @@
 import JonasDiscordBot from './components/JonasDiscordBot/JonasDiscordBot'
+import Website from './components/Website/Website'
 import './App.css'
 
 function App() {
   return (
-    <JonasDiscordBot />
+    <>
+      <h1>Status Page</h1>
+      <JonasDiscordBot />
+      <Website />
+    </>
   )
 }
 
