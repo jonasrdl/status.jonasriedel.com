@@ -12,7 +12,7 @@ class Website extends React.Component {
   }
 
   componentDidMount() {
-    axios.get('https://status.jonasriedel.com/api/website')
+    axios.get('https://status.jonasriedel.com/api/website', { validateStatus: false })
       .then((result) => {
         this.setState({
           onlineData: result.status,
