@@ -1,5 +1,33 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
+
+:root {
+  --main-white-color: #F3F6F9;
+}
 
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Source Sans Pro', sans-serif;
+  background-color: #0A1929;
+}
+
+h1 {
+  font-size: 3rem;
+  text-align: center;
+  color: var(--main-white-color);
+}
+
+.fa-discord {
+  color: var(--main-white-color);
+  margin-left: .8rem;
+  font-size: 2rem;
+}
+
+.discord, .website {
+  text-align: center;
+  font-size: 2rem;
+  color: var(--main-white-color);
+}
+
+.onlineStatus {
+  text-align: center;
+  font-size: 1.5rem;
 }
