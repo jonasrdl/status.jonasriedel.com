@@ -1,19 +1,22 @@
-const PORT = 55689
-const IP = '172.17.0.1'
-const URL = `http://${IP}:${PORT}`
+const API = `http://status.jonasriedel.com/api`
 const axios = require('axios')
 
-const isOnline = () => {
-  axios.default.get(`${URL}/isOnline`, (req, res) => {
-    console.log(res)
+const isOnline = (callback) => {
+  axios.default.get(`${API}/jonasdiscordbot`).then((result) => {
+    let websiteOnline = result.data
+
+    callback(websiteOnline)
   })
 }
 
 const JonasDiscordBot = () => {
-  isOnline()
-
   return (
-    <p>JonasDiscordBot</p>
+    <>
+      <p>JonasDiscordBot</p>
+      <p>{ isOnline((websiteOnline) => {
+        websiteOnline
+      }) }</p>
+    </>
   )
 }
 
