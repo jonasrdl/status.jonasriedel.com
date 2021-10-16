@@ -14,8 +14,6 @@ class JonasDiscordBot extends React.Component {
   componentDidMount() {
     axios.get('https://status.jonasriedel.com/api/jonasdiscordbot')
       .then((result) => {
-        console.log(result.data)
-
         this.setState({
           onlineData: JSON.stringify(result.data),
           DataisLoaded: true
@@ -36,11 +34,7 @@ class JonasDiscordBot extends React.Component {
 
     return (
       <div>
-        {
-          onlineData.map((item) => (
-            <p>{item}</p>
-          ))
-        }
+        {this.state.onlineData}
       </div>
     )
   }
