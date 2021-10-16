@@ -1,8 +1,9 @@
 const PORT = 55689
 const URL = `http://localhost:${PORT}`
+const axios = require('axios')
 
 const isOnline = () => {
-  fetch(`${URL}/isOnline`, (req, res) => {
+  axios.default.get(`${URL}/isOnline`, (req, res) => {
     console.log(res)
   })
 }
