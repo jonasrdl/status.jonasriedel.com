@@ -11,11 +11,11 @@ class JonasDiscordBot extends React.Component {
   }
 
   componentDidMount() {
-    console.log("Component did mount")
-
     fetch('https://status.jonasriedel.com/api/jonasdiscordbot')
       .then((res) => res.json())
       .then((json) => {
+        console.log(json)
+
         this.setState({
           onlineData: json,
           DataisLoaded: true
