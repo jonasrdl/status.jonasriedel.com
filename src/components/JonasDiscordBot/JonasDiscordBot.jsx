@@ -1,6 +1,5 @@
-import axios from "axios"
-import React from "react"
-import './JonasDiscordBot.css'
+import axios from 'axios'
+import React from 'react'
 
 class JonasDiscordBot extends React.Component {
   constructor(props) {
@@ -36,15 +35,23 @@ class JonasDiscordBot extends React.Component {
 
     if (this.state.onlineData === 'OK') {
       botOnlineStatus = 'Bot is online!'
+      
+      return (
+        <div>
+          <p>Discord Bot:</p>
+          <p style={{ color: 'green' }}>{botOnlineStatus}</p>
+        </div>
+      )
     } else {
       botOnlineStatus = 'Bot is offline!'
-    }
 
-    return (
-      <div>
-        <p>{botOnlineStatus}</p>
-      </div>
-    )
+      return (
+        <div>
+          <p>Discord Bot:</p>
+          <p style={{ color: 'red' }}>{botOnlineStatus}</p>
+        </div>
+      )  
+    }
   }
 }
 
