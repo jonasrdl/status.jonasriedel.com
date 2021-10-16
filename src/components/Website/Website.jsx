@@ -33,7 +33,7 @@ class Website extends React.Component {
       )
     }
 
-    if (this.state.onlineData === '200') {
+    if (this.state.onlineData === 200) {
       websiteOnlineStatus = 'Website is online!'
       
       return (
