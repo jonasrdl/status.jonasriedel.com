@@ -23,6 +23,7 @@ class JonasDiscordBot extends React.Component {
 
   render() {
     const { DataisLoaded, onlineData } = this.state
+    let botOnlineStatus;
 
     if (!DataisLoaded) {
       return (
@@ -32,9 +33,17 @@ class JonasDiscordBot extends React.Component {
       )
     }
 
+    if (this.state.onlineData === 'OK') {
+      botOnlineStatus = 'Bot is online!'
+      botOnlineStatus.fontcolor = 'green'
+    } else {
+      botOnlineStatus = 'Bot is offline!'
+      botOnlineStatus.fontcolor = 'red'
+    }
+
     return (
       <div>
-        {this.state.onlineData}
+        <p>{botOnlineStatus}</p>
       </div>
     )
   }
