@@ -1,5 +1,6 @@
 const PORT = 55689
-const URL = `http://localhost:${PORT}`
+const IP = '172.17.0.1'
+const URL = `http://${IP}:${PORT}`
 const axios = require('axios')
 
 const isOnline = () => {
