@@ -15,7 +15,7 @@ class Website extends React.Component {
     axios.get('https://status.jonasriedel.com/api/website')
       .then((result) => {
         this.setState({
-          onlineData: result.data,
+          onlineData: result.status,
           DataisLoaded: true
         })
       })
