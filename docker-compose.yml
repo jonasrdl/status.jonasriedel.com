@@ -1,8 +1,8 @@
-version:                     '3'
+version: '3'
 services:
   frontend:
-    build:                   .
-    restart:                 always
-    command:                 serve -s build
+    build: .
+    restart: always
+    command: serve -s build
     ports:
-      - "8901:5000"
+      - '8901:3000'
